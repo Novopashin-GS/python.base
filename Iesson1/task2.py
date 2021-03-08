@@ -1,9 +1,8 @@
 # Спросить у пользователя число и вывести в ответ сумму цифр этого числа. Программа должна спрашивать числа у пользователя до тех пор, пока он не введет "0".
-user_namber = None
-total = 0
-while user_namber != "0":
-    user_namber = input("Ввеdите число, сумму цифр которого вы хотите найти. Dля выхоdа из программы нажмите 0 ")
-    for i in user_namber:
+user_number = None
+while user_number != "0":
+    total = 0
+    user_number = input("Ввеdите число, сумму цифр которого вы хотите найти. Dля выхоdа из программы нажмите 0 ")
+    for i in user_number:
         total += int(i)
     print(total)
-    total = 0
