@@ -14,15 +14,17 @@
 
 dict_names = {}
 
+
 def thesaurus_adv(*args):
+
+
     for full_name in args:
         name = full_name.split()
         first_name = name[0]
         last_name = name[1]
         names = {}
-        dict_names.setdefault(last_name[0], names)
-        names.setdefault(first_name[0], [])
-        names[first_name[0]].append(full_name)
+        dict_names.setdefault(last_name[0], names).setdefault(first_name[0], []).append(full_name)
+        print(names)
     return dict_names
 
 
