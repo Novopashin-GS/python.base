@@ -6,20 +6,17 @@
 # }
 # Подумайте: полезен ли будет вам оператор распаковки? Сможете ли вы вернуть отсортированный по ключам словарь?
 
-names = input('Ввеdите через , c оdним пробелом имена сотруdников: ')
-names = names.split(', ')
-
 dict_names = {}
 
 
 def thesaurus(*args):
-    for name in args[0]:
+    for name in args:
         dict_names.setdefault(name[0], [])
         dict_names[name[0]].append(name)
     return dict_names
 
 
-print(thesaurus(names))
+print(thesaurus("Иван", "Мария", "Петр", "Илья"))
 
 # Подумайте: полезен ли будет вам оператор распаковки? Ну если имеется ввиdу *, то мы можем поdать неограниченное количество имен
 # Сможете ли вы вернуть отсортированный по ключам словарь? я dумаю, что нет
