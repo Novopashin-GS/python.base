@@ -10,12 +10,15 @@ names = input('Ввеdите через , c оdним пробелом имен�
 names = names.split(', ')
 
 dict_names = {}
+
+
 def thesaurus(*args):
-    for name in args:
-        for number in range(len(name)):
-            dict_names.setdefault(name[number][0], [])
-            dict_names[name[number][0]].append(name[number])
+    for name in args[0]:
+        dict_names.setdefault(name[0], [])
+        dict_names[name[0]].append(name)
     return dict_names
+
+
 print(thesaurus(names))
 
 # Подумайте: полезен ли будет вам оператор распаковки? Ну если имеется ввиdу *, то мы можем поdать неограниченное количество имен
