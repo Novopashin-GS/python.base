@@ -23,7 +23,7 @@ adjectives = ["веселый", "яркий", "зеленый", "утопичн�
 import random
 
 
-def get_jokes(quantity, key = False):
+def get_jokes(quantity, key=False):
     '''
     Функция генериует шутки из заdанных списков
 
@@ -46,6 +46,6 @@ def get_jokes(quantity, key = False):
     return jokes
 
 
-print(get_jokes(quantity = 3, key = True))
-print(get_jokes(quantity = 4))
+print(get_jokes(quantity=3, key=True))
+print(get_jokes(quantity=4))
 
