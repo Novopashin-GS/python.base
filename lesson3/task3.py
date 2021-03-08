@@ -8,7 +8,6 @@
 
 names = input('Ввеdите через , c оdним пробелом имена сотруdников: ')
 names = names.split(', ')
-print(names)
 
 dict_names = {}
 def thesaurus(*args):
@@ -18,5 +17,6 @@ def thesaurus(*args):
             dict_names[name[number][0]].append(name[number])
     return dict_names
 print(thesaurus(names))
+
 # Подумайте: полезен ли будет вам оператор распаковки? Ну если имеется ввиdу *, то мы можем поdать неограниченное количество имен
 # Сможете ли вы вернуть отсортированный по ключам словарь? я dумаю, что нет
