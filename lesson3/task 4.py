@@ -24,7 +24,6 @@ def thesaurus_adv(*args):
         last_name = name[1]
         names = {}
         dict_names.setdefault(last_name[0], names).setdefault(first_name[0], []).append(full_name)
-        print(names)
     return dict_names
 
 
