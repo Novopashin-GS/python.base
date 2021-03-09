@@ -23,7 +23,7 @@ def num_translate(word):
     new_word = word.lower()
     if new_word[1:] == word[1:] and new_word[0].upper() == word[0]:
         return words[new_word][0].upper() + words[new_word][1:]
-    elif new_word in words and new_word[0].upper() != word[0]:
+    elif word in words:
         return words[new_word]
     else:
         return words.get(new_word)
