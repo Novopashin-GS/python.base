@@ -25,7 +25,6 @@ def get_currency_rate(valute):
             break
     else:
         return print('None')
-
     one_part_text, second_part_text = need_str.split('<Value>')
     one_part_valute, second_part_valute = second_part_text.split('</Value>')
     print(float(one_part_valute.replace(',', '.')))
