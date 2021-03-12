@@ -8,6 +8,7 @@ import datetime
 import requests
 import decimal
 
+
 def get_currency_rate(valute):
     site = requests.get('http://www.cbr.ru/scripts/XML_daily.asp')
     text = site.content.decode('windows-1251')
@@ -21,12 +22,11 @@ def get_currency_rate(valute):
 
     one_part_text, second_part_text = need_str.split('<Value>')
     one_part_valute, second_part_valute = second_part_text.split('</Value>')
-    print(decimal.Decimal(one_part_valute.replace(',', '.')))
     one_part_text_day, second_part_text_day = text.split('Date="')
     one_part_text_need_day, second_part_text_need_day = second_part_text_day.split('" name')
     day, month, year = list(map(int, one_part_text_need_day.split('.')))
     date = datetime.date(year, month, day)
-    print(date)
+    print(f"{decimal.Decimal(one_part_valute.replace(',', '.'))}, {date}")
 
 
 get_currency_rate('GBP')
