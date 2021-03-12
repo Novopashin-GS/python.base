@@ -12,5 +12,4 @@
 # EUR 80.35, 2020-09-05
 
 from utils import get_currency_rate
-
 get_currency_rate('USD')
