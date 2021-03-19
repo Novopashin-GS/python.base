@@ -19,6 +19,7 @@ def get_currency_rate(valute):
             break
     else:
         return print('None')
+    print(need_str)
     one_part_text, second_part_text = need_str.split('<Value>')
     one_part_valute, second_part_valute = second_part_text.split('</Value>')
     one_part_text_day, second_part_text_day = text.split('Date="')
