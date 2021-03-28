@@ -7,22 +7,20 @@ user_time = int(input('Ввеdите размер интервала (в сек�
 second_in_minute = 60
 second_in_hour = 3600
 second_in_day = 86400
-if user_time < 60:
+minute = user_time // 60
+hour = minute // 60
+day = hour // 24
+second = user_time % 60
+minute %= 60
+hour %= 24
+if user_time < second_in_minute:
     print(f'{user_time} cекунd')
-elif user_time >= second_in_minute and user_time <second_in_hour:
-    minute = user_time // second_in_minute
-    second = user_time % second_in_minute
+elif user_time <second_in_hour:
     print(f'{minute} мин {second} сек')
-elif user_time >= second_in_hour and user_time < second_in_day:
-    hour = user_time // second_in_hour
-    minute = user_time % second_in_hour // second_in_minute
+elif user_time < second_in_day:
     second = user_time % second_in_hour % second_in_minute
     print(f'{hour} час {minute} мин {second} сек')
 elif user_time >= second_in_day:
-    day = user_time // second_in_day
-    hour = user_time % second_in_day // second_in_hour
-    minute = user_time % second_in_day % second_in_hour // second_in_minute
-    second = user_time % second_in_day % second_in_hour % second_in_minute
     print(f' {day} dень {hour} час {minute} мин {second} сек')
 else:
     print('Вы ввели некорректное время')
