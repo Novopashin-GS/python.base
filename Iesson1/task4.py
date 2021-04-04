@@ -9,14 +9,14 @@
 # 6 процентов
 # ...
 # 100 процентов
-for namber in range(1,101):
-    if namber >= 10 and namber <= 20:
-        print(f'{namber} процентов')
+for number in range(1, 101):
+    if number >= 10 and number <= 20:
+        print(f'{number} процентов')
     else:
-        remainder = namber % 10
+        remainder = number % 10
         if remainder == 1:
-            print(f'{namber} процент')
+            print(f'{number} процент')
         elif remainder >=2 and remainder <=4:
-            print(f'{namber} процента')
+            print(f'{number} процента')
         else:
-            print(f'{namber} процентов')
+            print(f'{number} процентов')
