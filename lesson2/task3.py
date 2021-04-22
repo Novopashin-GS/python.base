@@ -40,7 +40,7 @@ while count < len(element):
             variants = 0
         else:
             add(element)
-        count += 1
+        count += 2
     count += 1
 print(element)
 print(" ".join(element))
